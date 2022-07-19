@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shared_video
+    - paragraphs.paragraphs_type.happy_clients
+  module:
+    - text
+id: paragraph.happy_clients.field_shared_video
+field_name: field_shared_video
+entity_type: paragraph
+bundle: happy_clients
+label: 'Shared video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

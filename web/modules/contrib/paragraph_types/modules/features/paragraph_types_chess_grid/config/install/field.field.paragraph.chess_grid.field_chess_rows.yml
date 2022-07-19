@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_chess_rows
+    - paragraphs.paragraphs_type.chess_grid
+    - paragraphs.paragraphs_type.chess_row
+  module:
+    - entity_reference_revisions
+id: paragraph.chess_grid.field_chess_rows
+field_name: field_chess_rows
+entity_type: paragraph
+bundle: chess_grid
+label: 'Chess rows'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      chess_row: chess_row
+    target_bundles_drag_drop:
+      chess_grid:
+        weight: 16
+        enabled: false
+      chess_row:
+        enabled: true
+        weight: 17
+      client_item:
+        weight: 18
+        enabled: false
+      counter:
+        weight: 19
+        enabled: false
+      counter_item:
+        weight: 20
+        enabled: false
+      double_slider:
+        weight: 21
+        enabled: false
+      happy_clients:
+        weight: 22
+        enabled: false
+      header:
+        weight: 23
+        enabled: false
+      linked_image:
+        weight: 24
+        enabled: false
+      mix_grid:
+        weight: 25
+        enabled: false
+      mix_item:
+        weight: 26
+        enabled: false
+      mixed_typesetting:
+        weight: 27
+        enabled: false
+      team:
+        weight: 28
+        enabled: false
+      team_member:
+        weight: 29
+        enabled: false
+      top_articles:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

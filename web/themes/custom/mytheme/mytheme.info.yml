@@ -1,0 +1,7 @@
+name: My Theme
+type: theme
+description: 'This is my first theme'
+core_version_requirement: ^8 || ^9
+base theme: olivero
+libraries:
+  - 'mytheme/global-styling'

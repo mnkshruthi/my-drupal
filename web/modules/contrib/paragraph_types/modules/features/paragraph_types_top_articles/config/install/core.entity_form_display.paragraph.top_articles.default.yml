@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.top_articles.field_headline
+    - field.field.paragraph.top_articles.field_quantity
+    - field.field.paragraph.top_articles.field_subtitle
+    - paragraphs.paragraphs_type.top_articles
+id: paragraph.top_articles.default
+targetEntityType: paragraph
+bundle: top_articles
+mode: default
+content:
+  field_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quantity:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: mix_grid
+label: 'Mix Grid'
+icon_uuid: null
+icon_default: null
+description: 'Provides a paragraph type that show mixed image and text in grid layout.'
+behavior_plugins: {  }

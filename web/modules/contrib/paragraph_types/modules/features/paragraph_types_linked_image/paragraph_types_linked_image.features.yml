@@ -1,0 +1,7 @@
+bundle: paragraph_types
+excluded:
+  - field.field.paragraph.client_item.field_linked_image
+  - field.field.paragraph.counter_item.field_linked_image
+  - field.field.paragraph.double_slider.field_linked_image
+  - field.storage.paragraph.field_linked_image
+required: true

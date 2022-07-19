@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mix_item.field_headline
+    - field.field.paragraph.mix_item.field_icon
+    - field.field.paragraph.mix_item.field_linked_image
+    - field.field.paragraph.mix_item.field_text
+    - paragraphs.paragraphs_type.mix_item
+  module:
+    - paragraphs
+id: paragraph.mix_item.default
+targetEntityType: paragraph
+bundle: mix_item
+mode: default
+content:
+  field_headline:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_linked_image:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

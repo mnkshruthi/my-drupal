@@ -1,0 +1,17 @@
+name: 'Paragraph type Mixed Typesetting'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:link'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'paragraph_types:paragraph_types'
+  - 'paragraph_types:paragraph_types_linked_image'
+  - 'paragraphs:paragraphs'
+  - 'tb_megamenu:tb_megamenu'
+package: 'Paragraph Types'
+
+# Information added by Drupal.org packaging script on 2021-05-11
+version: '8.x-1.0-beta4'
+project: 'paragraph_types'
+datestamp: 1620721344

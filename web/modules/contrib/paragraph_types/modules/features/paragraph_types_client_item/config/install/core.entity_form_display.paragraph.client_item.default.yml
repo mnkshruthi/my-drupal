@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.client_item.field_avatar
+    - field.field.paragraph.client_item.field_linked_image
+    - field.field.paragraph.client_item.field_name
+    - field.field.paragraph.client_item.field_position_title
+    - field.field.paragraph.client_item.field_text
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.client_item
+  module:
+    - paragraphs
+    - svg_image
+id: paragraph.client_item.default
+targetEntityType: paragraph
+bundle: client_item
+mode: default
+content:
+  field_avatar:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_linked_image:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_position_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

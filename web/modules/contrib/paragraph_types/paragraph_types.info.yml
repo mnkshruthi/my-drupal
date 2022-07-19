@@ -1,0 +1,26 @@
+name: 'Paragraph Types'
+type: module
+description: 'Provides a set of paragraph types for reuse.'
+core_version_requirement: ^8.8 || ^9
+package: Custom
+dependencies:
+  - entity_reference_revisions
+  - features
+  - field
+  - language
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - user
+  - file
+  - image
+  - options
+  - link
+  - entity_reference_revisions
+  - svg_image
+
+# Information added by Drupal.org packaging script on 2021-05-11
+version: '8.x-1.0-beta4'
+project: 'paragraph_types'
+datestamp: 1620721344

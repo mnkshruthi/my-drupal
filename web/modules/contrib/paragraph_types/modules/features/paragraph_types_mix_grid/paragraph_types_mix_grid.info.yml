@@ -1,0 +1,15 @@
+name: 'Paragraph type Mix Grid'
+type: module
+core_version_requirement: ^8.8 || ^9
+package: 'Paragraph Types'
+dependencies:
+  - entity_reference_revisions
+  - field
+  - paragraphs
+  - paragraph_types
+  - paragraph_types_mix_item
+
+# Information added by Drupal.org packaging script on 2021-05-11
+version: '8.x-1.0-beta4'
+project: 'paragraph_types'
+datestamp: 1620721344

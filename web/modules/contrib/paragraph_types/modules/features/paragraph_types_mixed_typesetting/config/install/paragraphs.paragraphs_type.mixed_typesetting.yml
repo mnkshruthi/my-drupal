@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: mixed_typesetting
+label: 'Mixed Typesetting'
+icon_uuid: null
+icon_default: null
+description: 'Show a paragraph of mixed typesetting in some images and texts.'
+behavior_plugins: {  }

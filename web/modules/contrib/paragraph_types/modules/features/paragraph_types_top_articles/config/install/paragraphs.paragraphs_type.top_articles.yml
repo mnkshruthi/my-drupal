@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: top_articles
+label: 'Top Articles'
+icon_uuid: null
+icon_default: null
+description: 'Provides a top article list.'
+behavior_plugins: {  }

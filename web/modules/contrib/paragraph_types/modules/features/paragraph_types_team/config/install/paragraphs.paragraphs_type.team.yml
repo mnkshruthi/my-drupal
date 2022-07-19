@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: team
+label: Team
+icon_uuid: null
+icon_default: null
+description: 'Show team members of your company.'
+behavior_plugins: {  }

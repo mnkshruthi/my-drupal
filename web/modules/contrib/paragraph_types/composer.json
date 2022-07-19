@@ -1,0 +1,18 @@
+{
+    "name": "drupal/paragraph_types",
+    "type": "drupal-module",
+    "description": "Provides a set of paragraph types for reuse.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/paragraph_types",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/paragraph_types",
+        "source": "http://cgit.drupalcode.org/paragraph_types"
+    },
+    "require": {
+        "drupal/paragraphs": "^1.12",
+        "drupal/features": "^3.11",
+        "drupal/svg_image": "^1.14"
+    }
+}

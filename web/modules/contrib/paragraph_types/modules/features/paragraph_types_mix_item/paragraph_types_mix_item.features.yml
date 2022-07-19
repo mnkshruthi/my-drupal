@@ -1,0 +1,4 @@
+bundle: paragraph_types
+excluded:
+  - field.storage.paragraph.field_linked_image
+required: true

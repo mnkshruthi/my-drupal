@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mix_item.field_headline
+    - field.field.paragraph.mix_item.field_icon
+    - field.field.paragraph.mix_item.field_linked_image
+    - field.field.paragraph.mix_item.field_text
+    - paragraphs.paragraphs_type.mix_item
+  module:
+    - entity_reference_revisions
+id: paragraph.mix_item.default
+targetEntityType: paragraph
+bundle: mix_item
+mode: default
+content:
+  field_headline:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_icon:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_linked_image:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_text:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

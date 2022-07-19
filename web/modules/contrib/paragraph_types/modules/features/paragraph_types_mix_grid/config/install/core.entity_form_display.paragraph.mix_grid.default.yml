@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mix_grid.field_headline
+    - field.field.paragraph.mix_grid.field_mix_items
+    - field.field.paragraph.mix_grid.field_text
+    - paragraphs.paragraphs_type.mix_grid
+  module:
+    - paragraphs
+id: paragraph.mix_grid.default
+targetEntityType: paragraph
+bundle: mix_grid
+mode: default
+content:
+  field_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mix_items:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

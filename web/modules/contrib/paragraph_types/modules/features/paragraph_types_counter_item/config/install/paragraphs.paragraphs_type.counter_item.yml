@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: counter_item
+label: 'Counter Item'
+icon_uuid: null
+icon_default: null
+description: 'a counting number of the counter paragraph.'
+behavior_plugins: {  }

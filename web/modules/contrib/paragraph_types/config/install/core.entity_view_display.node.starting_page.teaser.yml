@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.starting_page.field_content
+    - node.type.starting_page
+  module:
+    - paragraphs
+    - user
+id: node.starting_page.teaser
+targetEntityType: node
+bundle: starting_page
+mode: teaser
+content:
+  field_content:
+    type: paragraph_summary
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

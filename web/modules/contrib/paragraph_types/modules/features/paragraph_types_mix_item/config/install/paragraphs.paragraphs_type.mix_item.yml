@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: mix_item
+label: 'Mix Item'
+icon_uuid: null
+icon_default: null
+description: 'Provides a paragraph type for compose unit pack of image, headline, text.'
+behavior_plugins: {  }

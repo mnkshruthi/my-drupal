@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team_member.field_name
+    - field.field.paragraph.team_member.field_photo
+    - field.field.paragraph.team_member.field_position_title
+    - field.field.paragraph.team_member.field_social_networks
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.team_member
+  module:
+    - image
+    - link
+id: paragraph.team_member.default
+targetEntityType: paragraph
+bundle: team_member
+mode: default
+content:
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_photo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_position_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_social_networks:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.counter_item.field_headline
+    - field.field.paragraph.counter_item.field_linked_image
+    - field.field.paragraph.counter_item.field_number
+    - paragraphs.paragraphs_type.counter_item
+  module:
+    - paragraphs
+id: paragraph.counter_item.default
+targetEntityType: paragraph
+bundle: counter_item
+mode: default
+content:
+  field_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_linked_image:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_number:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,4 @@
+bundle: paragraph_types
+excluded:
+  - tb_megamenu.menu_config.main__cattask_alpha
+required: true

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: team_member
+label: 'Team Member'
+icon_uuid: null
+icon_default: null
+description: 'Member infomation of a team.'
+behavior_plugins: {  }

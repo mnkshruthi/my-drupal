@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: happy_clients
+label: 'Happy Clients'
+icon_uuid: null
+icon_default: null
+description: 'Show feedback from different clients.'
+behavior_plugins: {  }

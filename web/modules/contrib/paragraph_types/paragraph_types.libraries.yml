@@ -1,0 +1,27 @@
+chess-row:
+  version: VERSION
+  css:
+    component:
+      'assets/css/chess-row.css': {}
+mix-grid:
+  version: VERSION
+  css:
+    component:
+      'assets/css/mix-grid.css': {}
+double-slider:
+  version: VERSION
+  css:
+    component:
+      'assets/css/double-slider.css': {}
+  js:
+    'assets/js/double-slider.js': {}
+  dependencies:
+    - paragraph_types/swiper
+swiper:
+  version: 6.4.10
+  css:
+    component:
+      'assets/vendor/swiper/swiper-bundle.min.css': { minified: true }
+  js:
+    'assets/vendor/swiper/swiper-bundle.min.js': { minified: true }
+

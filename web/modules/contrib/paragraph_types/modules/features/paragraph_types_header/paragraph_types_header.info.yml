@@ -1,0 +1,14 @@
+name: 'Paragraph type Header'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'drupal:field'
+  - 'paragraph_types:paragraph_types'
+  - 'paragraphs:paragraphs'
+  - 'tb_megamenu:tb_megamenu'
+package: 'Paragraph Types'
+
+# Information added by Drupal.org packaging script on 2021-05-11
+version: '8.x-1.0-beta4'
+project: 'paragraph_types'
+datestamp: 1620721344

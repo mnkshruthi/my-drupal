@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mix_items
+    - paragraphs.paragraphs_type.mix_grid
+    - paragraphs.paragraphs_type.mix_item
+  module:
+    - entity_reference_revisions
+id: paragraph.mix_grid.field_mix_items
+field_name: field_mix_items
+entity_type: paragraph
+bundle: mix_grid
+label: 'Mix items'
+description: 'Mixed pack of image and text with headline will show in the grid.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      mix_item: mix_item
+    target_bundles_drag_drop:
+      chess_row:
+        weight: 7
+        enabled: false
+      double_slider:
+        weight: 8
+        enabled: false
+      linked_image:
+        weight: 9
+        enabled: false
+      mix_grid:
+        weight: 10
+        enabled: false
+      mix_item:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_linked_image
+    - paragraphs.paragraphs_type.client_item
+    - paragraphs.paragraphs_type.linked_image
+  module:
+    - entity_reference_revisions
+id: paragraph.client_item.field_linked_image
+field_name: field_linked_image
+entity_type: paragraph
+bundle: client_item
+label: Organization
+description: 'Logo and name of the organization the client came from.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      linked_image: linked_image
+    target_bundles_drag_drop:
+      chess_row:
+        weight: 12
+        enabled: false
+      client_item:
+        weight: 13
+        enabled: false
+      counter:
+        weight: 14
+        enabled: false
+      counter_item:
+        weight: 15
+        enabled: false
+      double_slider:
+        weight: 16
+        enabled: false
+      happy_clients:
+        weight: 17
+        enabled: false
+      header:
+        weight: 18
+        enabled: false
+      linked_image:
+        enabled: true
+        weight: 19
+      mix_grid:
+        weight: 20
+        enabled: false
+      mix_item:
+        weight: 21
+        enabled: false
+      mixed_typesetting:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

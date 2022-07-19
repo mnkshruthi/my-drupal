@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: linked_image
+label: 'Linked Image'
+icon_uuid: null
+icon_default: null
+description: 'a banner image with link.'
+behavior_plugins: {  }

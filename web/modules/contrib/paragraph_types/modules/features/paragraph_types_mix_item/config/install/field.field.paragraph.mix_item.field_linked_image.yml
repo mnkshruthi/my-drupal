@@ -1,0 +1,69 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_linked_image
+    - paragraphs.paragraphs_type.linked_image
+    - paragraphs.paragraphs_type.mix_item
+  module:
+    - entity_reference_revisions
+id: paragraph.mix_item.field_linked_image
+field_name: field_linked_image
+entity_type: paragraph
+bundle: mix_item
+label: 'Linked image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      linked_image: linked_image
+    target_bundles_drag_drop:
+      chess_row:
+        weight: 7
+        enabled: false
+      client_item:
+        weight: 16
+        enabled: false
+      counter:
+        weight: 17
+        enabled: false
+      counter_item:
+        weight: 18
+        enabled: false
+      double_slider:
+        weight: 8
+        enabled: false
+      happy_clients:
+        weight: 20
+        enabled: false
+      header:
+        weight: 21
+        enabled: false
+      linked_image:
+        enabled: true
+        weight: 9
+      mix_grid:
+        weight: 10
+        enabled: false
+      mix_item:
+        weight: 6
+        enabled: false
+      mixed_typesetting:
+        weight: 23
+        enabled: false
+      team:
+        weight: 26
+        enabled: false
+      team_member:
+        weight: 27
+        enabled: false
+      top_articles:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

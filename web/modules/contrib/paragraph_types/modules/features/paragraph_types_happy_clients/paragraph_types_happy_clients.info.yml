@@ -1,0 +1,19 @@
+name: 'Paragraph type Happy Clients'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:image'
+  - 'drupal:text'
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - 'paragraph_types:paragraph_types'
+  - 'paragraph_types:paragraph_types_client_item'
+  - 'paragraphs:paragraphs'
+  - 'svg_image:svg_image'
+  - 'tb_megamenu:tb_megamenu'
+package: 'Paragraph Types'
+
+# Information added by Drupal.org packaging script on 2021-05-11
+version: '8.x-1.0-beta4'
+project: 'paragraph_types'
+datestamp: 1620721344

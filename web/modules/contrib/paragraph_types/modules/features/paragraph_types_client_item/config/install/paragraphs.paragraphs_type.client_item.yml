@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: client_item
+label: 'Client Item'
+icon_uuid: null
+icon_default: null
+description: 'Infomation of a client.'
+behavior_plugins: {  }

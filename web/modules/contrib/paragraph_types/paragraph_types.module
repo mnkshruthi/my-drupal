@@ -1,0 +1,460 @@
+<?php
+
+/**
+ * @file
+ * Contains paragraph_types.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function paragraph_types_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the paragraph_types module.
+    case 'help.page.paragraph_types':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a set of paragraph types for reuse.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function paragraph_types_theme() {
+  return [
+    'paragraph__chess_grid' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__chess_row' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__double_slider' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__linked_image' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__mix_grid' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__mix_item' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__mixed_typesetting' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__header' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__counter' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__counter_item' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__happy_clients' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__client_item' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__team' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__team_member' => [
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__top_articles' => [
+      'base hook' => 'paragraph',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ * @param $variables
+ */
+function paragraph_types_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['paragraph'];
+  $type = $paragraph->bundle();
+  switch ($type) {
+    // Linked Image
+    case 'linked_image':
+      $files = $paragraph->get('field_image')->referencedEntities();
+      if (count($files))
+        $image_uri = $files[0]->uri[0]->value;
+      else
+        $image_uri = '';
+
+      $variables['image_url'] = file_create_url($image_uri);
+      $variables['image_alt'] = $variables['paragraph']->get('field_image')->alt;
+      $variables['image_title'] = $variables['paragraph']->get('field_image')->title;
+      $variables['link_url'] = $variables['paragraph']->get('field_link')->uri;
+      $variables['link_title'] = $variables['paragraph']->get('field_link')->title;
+      break;
+    case 'chess_row':
+      $variables['image_position'] = $paragraph->field_image_position->value;
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['text'] = $paragraph->field_text->value;
+
+      $files = $paragraph->get('field_image')->referencedEntities();
+      if (count($files))
+        $image_uri = $files[0]->uri[0]->value;
+      else
+        $image_uri = '';
+
+      $variables['image_url'] = file_create_url($image_uri);
+      $variables['image_alt'] = $variables['paragraph']->get('field_image')->alt;
+      $variables['image_title'] = $variables['paragraph']->get('field_image')->title;
+      $variables['link_url'] = $variables['paragraph']->get('field_link')->uri;
+      $variables['link_title'] = $variables['paragraph']->get('field_link')->title;
+      break;
+    case 'chess_grid':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+
+      $variables['chess_rows'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $chess_rows */
+      $chess_rows = $paragraph->get('field_chess_rows')->referencedEntities();
+      foreach ($chess_rows as $chess_row) {
+
+        $files = $chess_row->get('field_image')->referencedEntities();
+        if (count($files))
+          $image_uri = $files[0]->uri[0]->value;
+        else
+          $image_uri = '';
+
+        $variables['chess_rows'][] = [
+          'headline' => $chess_row->field_headline->value,
+          'subtitle' => $chess_row->field_subtitle->value,
+          'text' => $chess_row->field_text->value,
+          'image_position' => $chess_row->field_image_position->value,
+          'linked_image' => [
+            'image_url' => file_create_url($image_uri),
+            'image_alt' => $chess_row->get('field_image')->alt,
+            'image_title' => $chess_row->get('field_image')->title,
+            'link_url' => $chess_row->get('field_link')->uri,
+            'link_title' => $chess_row->get('field_link')->title,
+          ]
+        ];
+      }
+      break;
+    case 'mix_grid':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['text'] = $paragraph->field_text->value;
+      // prepare grid items.
+      $variables['mix_items'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $mix_items */
+      $mix_items = $paragraph->get('field_mix_items')->referencedEntities();
+      foreach ($mix_items as $mix_item) {
+
+        $linked_images = $mix_item->get('field_linked_image')->referencedEntities();
+        $image_uri = '';
+        $linked_image_data = [];
+        if (count($linked_images)) {
+          $files = $linked_images[0]->get('field_image')->referencedEntities();
+          if (count($files)) $image_uri = $files[0]->uri[0]->value;
+          $linked_image_data = [
+            'image_url' => file_create_url($image_uri),
+            'image_alt' => $linked_images[0]->get('field_image')->alt,
+            'image_title' => $linked_images[0]->get('field_image')->title,
+            'link_url' => $linked_images[0]->get('field_link')->uri,
+            'link_title' => $linked_images[0]->get('field_link')->title,
+          ];
+        }
+
+        $variables['mix_items'][] = [
+          'headline' => $mix_item->field_headline->value,
+          'text' => $mix_item->field_text->value,
+          'icon' => $mix_item->field_icon->value,
+          'linked_image' => $linked_image_data
+        ];
+      }
+      break;
+    case 'double_slider':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['text'] = $paragraph->field_text->value;
+      // prepare slide items.
+      $variables['linked_images'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $linked_images */
+      $linked_images = $paragraph->get('field_linked_images')->referencedEntities();
+      foreach ($linked_images as $linked_image) {
+
+        $files = $linked_image->get('field_image')->referencedEntities();
+        if (count($files))
+          $image_uri = $files[0]->uri[0]->value;
+        else
+          $image_uri = '';
+
+        $variables['linked_images'][] = [
+          'image_url' => file_create_url($image_uri),
+          'image_alt' => $linked_image->get('field_image')->alt,
+          'image_title' => $linked_image->get('field_image')->title,
+          'link_url' => $linked_image->get('field_link')->uri,
+          'link_title' => $linked_image->get('field_link')->title,
+        ];
+      }
+      break;
+    case 'mixed_typesetting':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+
+      $variables['link_url'] = $paragraph->get('field_link')->uri;
+      $variables['link_title'] = $paragraph->get('field_link')->title;
+
+      $variables['texts'] = [];
+      foreach ($paragraph->field_texts as $text) {
+        $variables['texts'][] = $text->value;
+      }
+
+      $variables['linked_images'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $linked_images */
+      $linked_images = $paragraph->get('field_linked_images')->referencedEntities();
+      foreach ($linked_images as $linked_image) {
+
+        $files = $linked_image->get('field_image')->referencedEntities();
+        if (count($files))
+          $image_uri = $files[0]->uri[0]->value;
+        else
+          $image_uri = '';
+
+        $variables['linked_images'][] = [
+          'image_url' => file_create_url($image_uri),
+          'image_alt' => $linked_image->get('field_image')->alt,
+          'image_title' => $linked_image->get('field_image')->title,
+          'link_url' => $linked_image->get('field_link')->uri,
+          'link_title' => $linked_image->get('field_link')->title,
+        ];
+      }
+      break;
+    case 'header':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+      break;
+    case 'counter':
+      $variables['counter_items'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $counter_items */
+      $counter_items = $paragraph->get('field_counter_items')->referencedEntities();
+      foreach ($counter_items as $counter_item) {
+        $linked_image = $counter_item->get('field_linked_image')->referencedEntities()[0];
+
+        $files = $linked_image->get('field_image')->referencedEntities();
+        if (count($files))
+          $image_uri = $files[0]->uri[0]->value;
+        else
+          $image_uri = '';
+
+        $variables['counter_items'][] = [
+          'headline' => $counter_item->field_headline->value,
+          'number' => (int)$counter_item->field_number->value,
+          'linked_image' => [
+            'image_url' => file_create_url($image_uri),
+            'image_alt' => $linked_image->get('field_image')->alt,
+            'image_title' => $linked_image->get('field_image')->title,
+            'link_url' => $linked_image->get('field_link')->uri,
+            'link_title' => $linked_image->get('field_link')->title
+          ]
+        ];
+      }
+      break;
+    case 'counter_item':
+      $counter_item = $paragraph;
+
+      $files = $counter_item->get('field_image')->referencedEntities();
+      if (count($files))
+        $image_uri = $files[0]->uri[0]->value;
+      else
+        $image_uri = '';
+
+      $variables += [
+        'headline' => $counter_item->field_headline->value,
+        'number' => (int)$counter_item->field_number->value,
+        'linked_image' => [
+          'image_url' => file_create_url($image_uri),
+          'image_alt' => $counter_item->get('field_image')->alt,
+          'image_title' => $counter_item->get('field_image')->title,
+          'link_url' => $counter_item->get('field_link')->uri,
+          'link_title' => $counter_item->get('field_link')->title
+        ]
+      ];
+      break;
+    case 'happy_clients':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+      $variables['shared_video'] = $paragraph->field_shared_video->value;
+
+      $files = $paragraph->get('field_image')->referencedEntities();
+      if (count($files))
+        $image_uri = $files[0]->uri[0]->value;
+      else
+        $image_uri = '';
+
+      $variables['image_url'] = file_create_url($image_uri);
+      $variables['image_alt'] = $paragraph->get('field_image')->alt;
+      $variables['image_title'] = $paragraph->get('field_image')->title;
+
+      $variables['client_items'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $counter_items */
+      $client_items = $paragraph->get('field_client_items')->referencedEntities();
+      foreach ($client_items as $client_item) {
+
+        $avatar_files = $client_item->get('field_avatar')->referencedEntities();
+        if (count($avatar_files))
+          $avatar_image_uri = $avatar_files[0]->uri[0]->value;
+        else
+          $avatar_image_uri = '';
+
+        $linked_image = $client_item->get('field_linked_image')->isEmpty() ? null : $client_item->get('field_linked_image')->referencedEntities()[0];
+        $files = $linked_image ? $linked_image->get('field_image')->referencedEntities() : [];
+        if (count($files))
+          $image_uri = $files[0]->uri[0]->value;
+        else
+          $image_uri = '';
+
+        $variables['client_items'][] = [
+          'name' => $client_item->field_name->value,
+          'position_title' => $client_item->field_position_title->value,
+          'text' => $client_item->field_text->value,
+          'avatar' => [
+            'image_url' => file_create_url($avatar_image_uri),
+            'image_alt' => $client_item->get('field_avatar')->alt,
+            'image_title' => $client_item->get('field_avatar')->title,
+          ],
+          'organization' => [
+            'image_url' => file_create_url($image_uri),
+            'image_alt' => $linked_image ? $linked_image->get('field_image')->alt : '',
+            'image_title' => $linked_image ? $linked_image->get('field_image')->title : '',
+            'link_url' => $linked_image ? $linked_image->get('field_link')->uri : '',
+            'link_title' => $linked_image ? $linked_image->get('field_link')->title : ''
+          ]
+        ];
+      }
+      break;
+    case 'client_item':
+      $client_item = $paragraph;
+      $avatar_files = $client_item->get('field_avatar')->referencedEntities();
+      if (count($avatar_files))
+        $avatar_image_uri = $avatar_files[0]->uri[0]->value;
+      else
+        $avatar_image_uri = '';
+
+      $linked_image = $client_item->get('field_linked_image')->isEmpty() ? null : $client_item->get('field_linked_image')->referencedEntities()[0];
+      $files = $linked_image ? $linked_image->get('field_image')->referencedEntities() : [];
+      if (count($files))
+        $image_uri = $files[0]->uri[0]->value;
+      else
+        $image_uri = '';
+
+      $variables += [
+        'name' => $client_item->field_name->value,
+        'position_title' => $client_item->field_position_title->value,
+        'text' => $client_item->field_text->value,
+        'avatar' => [
+          'image_url' => file_create_url($avatar_image_uri),
+          'image_alt' => $client_item->get('field_avatar')->alt,
+          'image_title' => $client_item->get('field_avatar')->title,
+        ],
+        'organization' => [
+          'image_url' => file_create_url($image_uri),
+          'image_alt' => $linked_image ? $linked_image->get('field_image')->alt : '',
+          'image_title' => $linked_image ? $linked_image->get('field_image')->title : '',
+          'link_url' => $linked_image ? $linked_image->get('field_link')->uri : '',
+          'link_title' => $linked_image ? $linked_image->get('field_link')->title : ''
+        ]
+      ];
+      break;
+    case 'team':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+
+      $variables['members'] = [];
+      /** @var \Drupal\paragraphs\ParagraphInterface[] $counter_items */
+      $members = $paragraph->get('field_members')->referencedEntities();
+      foreach ($members as $member) {
+
+        $photo_files = $member->get('field_photo')->referencedEntities();
+        if (count($photo_files))
+          $photo_image_uri = $photo_files[0]->uri[0]->value;
+        else
+          $photo_image_uri = '';
+
+        $social_networks = [];
+        $social_network_links = $member->get('field_social_networks');
+        foreach ($social_network_links as $social_network_link) {
+          $social_networks[] = [
+            'link_url' => $social_network_link->uri,
+            'link_title' => $social_network_link->title
+          ];
+        }
+
+        $variables['members'][] = [
+          'name' => $member->field_name->value,
+          'position_title' => $member->field_position_title->value,
+          'photo' => [
+            'image_url' => file_create_url($photo_image_uri),
+            'image_alt' => $member->get('field_photo')->alt,
+            'image_title' => $member->get('field_photo')->title,
+          ],
+          'social_networks' => $social_networks
+        ];
+      }
+      break;
+    case 'team_member':
+      $member = $paragraph;
+      $photo_files = $member->get('field_photo')->referencedEntities();
+      if (count($photo_files))
+        $photo_image_uri = $photo_files[0]->uri[0]->value;
+      else
+        $photo_image_uri = '';
+
+      $social_networks = [];
+      $social_network_links = $member->get('field_social_networks');
+      foreach ($social_network_links as $social_network_link) {
+        $social_networks[] = [
+          'link_url' => $social_network_link->uri,
+          'link_title' => $social_network_link->title
+        ];
+      }
+
+      $variables += [
+        'name' => $member->field_name->value,
+        'position_title' => $member->field_position_title->value,
+        'photo' => [
+          'image_url' => file_create_url($photo_image_uri),
+          'image_alt' => $member->get('field_photo')->alt,
+          'image_title' => $member->get('field_photo')->title,
+        ],
+        'social_networks' => $social_networks
+      ];
+      break;
+    case 'top_articles':
+      $variables['headline'] = $paragraph->field_headline->value;
+      $variables['subtitle'] = $paragraph->field_subtitle->value;
+
+      $variables['articles'] = [];
+        // Load top blog posts.
+      $query = \Drupal::entityQuery('node');
+      $ids = $query->condition('type', 'blog_post')
+        ->sort('created', 'DESC')
+        ->range(0, 3)
+        ->execute();
+      /** @var \Drupal\node\NodeInterface[] $blog_posts */
+      $blog_posts = \Drupal\node\Entity\Node::loadMultiple($ids);
+      $view_builder = \Drupal::entityTypeManager()->getViewBuilder('node');
+      foreach ($blog_posts as $blog_post) {
+        $variables['articles'][] = [
+          'type' => $blog_post->bundle(),
+          'entity' => $blog_post,
+          'content' => $view_builder->view($blog_post, 'paragraph_article_item')
+        ];
+      }
+      break;
+  }
+}

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: chess_row
+label: 'Chess Row'
+icon_uuid: null
+icon_default: null
+description: 'A row of two grids, one for image, one for headline, text, and button.'
+behavior_plugins: {  }

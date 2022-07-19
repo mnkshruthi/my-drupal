@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: double_slider
+label: 'Double Slider'
+icon_uuid: null
+icon_default: null
+description: ' A slider that show two image per display.'
+behavior_plugins: {  }
