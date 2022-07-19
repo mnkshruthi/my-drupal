@@ -1,0 +1,500 @@
+   46  git status
+   47  git commit -m 'compiling scss for faq padding'
+   48  git status
+   49  git add .
+   50  git commit -m 'configuring yml file for padding faq view'
+   51  git status
+   52  git push me padding-faq-view-sh 
+   53  winpty ddev ssh
+   54  git status
+   55  git add .
+   56  git commit -m 'Updated css selector for padding faq view'
+   57  git status
+   58  git push me padding-faq-view-sh 
+   59  winpty ddev ssh
+   60  git status
+   61  git addd .
+   62  git commit -m 'Added padding to faq view inside view-blocks.scss file'
+   63  git status
+   64  git add .
+   65  git status
+   66  git commit -m 'Added padding to faq view inside view-blocks.scss file'
+   67  git status
+   68  git push me padding-
+   69  git push me padding-faq-view-sh 
+   70  git fetch --all
+   71  git checkout -b practice-sh origin/develop
+   72  git status
+   73  git fetch --all
+   74  git checkout -b styling-contact-form-sh origin/develop
+   75  gunzip port18_dev_2022*.sql.gz
+   76  winpty ddev ssh
+   77  git status
+   78  git add web/themes/port_theme/scss/contact_form.scss
+   79  git commit -m 'Added contact_form sass file'
+   80  git status
+   81  git add .
+   82  git commit -m 'Import contact_form sass file and compiled'
+   83  git status
+   84  git push me styling-contact-form-sh 
+   85  winpty ddev ssh
+   86  git status
+   87  git add .
+   88  git commit -m 'Styled Contact Form'
+   89  git status
+   90  git push me styling-contact-form-sh 
+   91  winpty ddev ssh
+   92  git status
+   93  git add .
+   94  git commit -m 'Adjusted Box Shadow to Contact Form'
+   95  git push me styling-contact-form-sh 
+   96  git --version
+   97  git remote -v
+   98  git fetch --all
+   99  git checkout -b layout-builder-background origin/develop
+  100  winpty ddev ssh
+  101  cd ~/Desktop/drupal8
+  102  ddev start
+  103  ddev logs
+  104  ls -la
+  105  ls 
+  106  pwd
+  107  ddev start
+  108  ddev launch
+  109  winpty ddev ssh
+  110  cd ../
+  111  cd drupal9
+  112  ddev delete drupal9
+  113  ddev delete --omit-snapshot drupal9
+  114  ddev delete drupal9
+  115  ddev start
+  116  ddev delete --omit-snapshot drupal9
+  117  cd ~/Desktop/
+  118  cd my-php/
+  119  ddev launch
+  120  ddev launch
+  121  ddev launch
+  122  ddev launch
+  123  ddev launch
+  124  ddev launch
+  125  ddev launch
+  126  ddev launch
+  127  ddev launch
+  128  ddev launch
+  129  ddev launch
+  130  cd ../
+  131  pwd
+  132  ls -la
+  133  cd druapl81
+  134  cd drupal81
+  135  ddev start
+  136  ddev launch
+  137  cd ../
+  138  mkdir drupal_new
+  139  cd drupal_new
+  140  ddev config --project-type=drupal8 --docroot=web --create-docroot
+  141  ddev start
+  142  mkdir drupal-new
+  143  cd ../
+  144  mkdir drupal-new
+  145  cd drupal-new
+  146  ddev config --project-type=drupal8 --docroot=web --create-docroot
+  147  ddev start
+  148  ddev launch
+  149  ddev composer create "drupal/recommended-project:^8"
+  150  ddev composer require drush/drush
+  151  ddev composer require drush/drush:*
+  152  ddev launch
+  153  ddev stop
+  154  ddev config --mutagen-enabled
+  155  ddev start
+  156  composer require 'drupal/admin_toolbar:^3.1'
+  157  winpty ddev ssh
+  158  cd ../
+  159  cd drupal81
+  160  ddev delete drupal81
+  161  cd ../
+  162  cd drupal-new
+  163  cd ~/Desktop/
+  164  cd drupal-new
+  165  ddev start
+  166  ddev config --mutagen-enabled
+  167  ddev start
+  168  ddev launch
+  169  winpty ddev ssh
+  170  winpty ddev ssh
+  171  ddev launch
+  172  winpty ddev ssh
+  173  cd libraries
+  174  ls -l
+  175  cd ~/Desktop/
+  176  ls -la
+  177  cd my-php/
+  178  ddev launch
+  179  ddev launch
+  180  php --version
+  181  --version
+  182  version
+  183  php -v
+  184  ddev launch
+  185  ddev launch
+  186  cd ../
+  187  cd debugacademy/drupal/
+  188  winpty ddev ssh
+  189  ddev start
+  190  ddev launch
+  191  cd ../../
+  192  mkdir drupal9
+  193  cd drupal9
+  194  clear
+  195  ddev config --project-type=drupal9 --docroot=web --create-docroot
+  196  ddev start
+  197  ddev composer create "drupal/recommended-project:^9"
+  198  ddev composer require drush/drush
+  199  ddev launch
+  200  clear
+  201  ddev config --mutagen-enabled
+  202  ddev start
+  203  clear
+  204  winpty ddev ssh
+  205  cd ~/Desktop/drupal-new
+  206  ddev start
+  207  ddev launch
+  208  cd ../
+  209  cd drupal8
+  210  ddev start
+  211  ddev launch
+  212  pwd
+  213  cd ..
+  214  pwd
+  215  cd ../
+  216  pwd
+  217  pwd
+  218  cd c:/
+  219  pwd
+  220  ls
+  221  cd gop
+  222  ls
+  223  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  224  ssh-add
+  225  ssh-add ec2-user@ip-10-0-21-116.us-west-2.compute.internal
+  226  ssh-add ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  227  ssh-add -l
+  228  ssh-add -l
+  229  eval "$(ssh-agent -s)"
+  230  ssh-add ~/.ssh/id_ed25519
+  231   ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  232  ssh-add
+  233  ssh ec2-user@ip-10-0-21-116.us-west-2.compute.internal
+  234   ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  235  cd cms-prod-test
+  236  docker-compose up -d
+  237  cd ../
+  238  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  239  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  240  aws s3 cp s3://gobp-ecd-snapshots/gdecms-2021-12-21.sql.gz ./mariadb-init
+  241  ssh -A Bastion
+  242  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  243  cd cms-prod-test/
+  244  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  245  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  246  exit
+  247  pwd
+  248  cd ../../
+  249  ls
+  250  cd GOP
+  251  git clone https://github.com/globalonboardpartners/gde-frontend.git
+  252  ls 
+  253  git clone https://github.com/globalonboardpartners/cms-prod.git
+  254  git clone https://github.com/globalonboardpartners/cms-prod-test.git
+  255  git config git config --global user.name
+  256  git config --global user.name
+  257  git config --global user.email
+  258  ls -al ~/.ssh
+  259  ssh-keygen -t ed25519 -C "mnkshruthi@outlook.com"
+  260  ssh-add ~/.ssh/id_ed25519
+  261  eval "$(ssh-agent -s)"
+  262  ssh-add ~/.ssh/id_ed25519
+  263  clip < ~/.ssh/id_ed25519.pub
+  264  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  265  winpty ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  266  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  267  ssh-add
+  268  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  269  ssh-add -l
+  270  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  271  ssh-add -l
+  272  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  273  ssh-keygen -t rsa -b 4096 -C "shruthi@globalonboardpartners.com"
+  274  eval "$(ssh-agent -s)"
+  275  ssh-add
+  276  ssh ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  277  cd ../
+  278  cd ../
+  279  code .
+  280  cd ~/Desktop/
+  281  ls -l
+  282  cd drupal-new
+  283  winpty ddev ssh
+  284  ssh mnkshruthi@outlook.com
+  285  ssh shruthi@globalonboardpartners.com
+  286  drush
+  287  winpty dddev ssh
+  288  winpty ddev ssh
+  289  cd ../
+  290  cd drupal
+  291  ls -l
+  292  cd debugacademy/
+  293  ls -l
+  294  cd drupal
+  295  winpty ddev ssh
+  296  cd ../../
+  297  cd drupal-new
+  298  winpty ddev ssh
+  299  composer global require drush/drush:9.*
+  300  winpty ddev ssh
+  301  cd ../
+  302  cd ../
+  303  ls -la
+  304  ls -l
+  305  cd c
+  306  cd ~/c
+  307  pwd
+  308  cd ../../
+  309  cd GOP
+  310  winpty ddev ssh
+  311  pwd
+  312  cd Users/mnksh
+  313  cd ../
+  314  cd Users/mnksh
+  315  cd ~/Desktop/
+  316  cd drupal
+  317  cd debugacademy/
+  318  cd drupal
+  319  ddev launch
+  320  ddev config --mutagen-enabled
+  321  ddev start
+  322  winpty ddev ssh
+  323  ddev launch
+  324  ddev launch
+  325  winpty ddev ssh
+  326  cd ../../
+  327  cd ../
+  328  cd c:
+  329  pwd
+  330  cd users/mnksh
+  331  aws --version
+  332  history > file2.txt
+  333  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  334  eval $(ssh-agent)
+  335  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  336  ssh-add -l
+  337  ssh-add
+  338  ssh-add -l
+  339  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  340  aws --version
+  341  docker-compose logs
+  342  docker-compose logs mariadb
+  343  docker-compose down -v
+  344  docker-compose up -d
+  345  http://drupal.docker.localhost:7005/update.php
+  346  docker-compose down -v
+  347  docker-compose up -d
+  348  docker-compose logs
+  349  docker-compose down -v
+  350  docker-compose up -d
+  351  wsl2 --version
+  352  wsl --list --verbose
+  353  docker-compose down -v
+  354  docker-compose logs > logs.txt
+  355  docker-compose logs
+  356  docker-compose up -d
+  357  docker system prune
+  358  docker-compose down -v
+  359  docker system prune
+  360  docker-compose up -d
+  361  docker-compose logs
+  362  docker-compose logs mariadb
+  363  ls mariadb-init
+  364  docker-compose logs mariadb | grep gdecms
+  365  docker exec -it mymy_drupal9_project_php
+  366  docker exec -it my_drupal9_project_php bash
+  367  winpty docker exec -it my_drupal9_project_php bash
+  368  docker-compose logs mariadb
+  369  history > file1.txt
+  370  aws s3 cp s3://gobp-ecd-snapshots/files-2021-12-21.zip ./web/sites/default
+  371  ls
+  372  ls ~/.aws
+  373  aws s3 ls s3://gobp-ecd-snapshots
+  374  cat ~/.aws/credentials
+  375  cat ~/.aws/config
+  376  aws configure get region
+  377  aws s3 ls s3://gobp-ecd-snapshots
+  378  aws s3 ls s3://gobp-ecd-snapshots
+  379  aws configure get region
+  380  aws s3 ls s3://gobp-ecd-snapshots
+  381  aws configure
+  382  aws s3 ls s3/gobp-ecd-snapshots
+  383  aws s3 ls
+  384  aws s3 ls gobp-ecd-snapshots
+  385  aws s3 ls console.aws.amazon.com/s3/gobp-ecd-snapshots/
+  386  aws s3 ls console.aws.amazon.com/s3/gobp-ecd-snapshots/*
+  387  aws s3 ls console.aws.amazon.com/s3/gobp-ecd-snapshots/* --profile mfa
+  388  aws sts get-session-token --serial-number arn:aws:iam::142426390117:mfa/shruthi@globalonboardpartners.com --token-code 393502 --duration 129600
+  389  aws s3 ls console.aws.amazon.com/s3/gobp-ecd-snapshots/* --profile mfa
+  390  aws configure
+  391  aws s3 ls s3://gobp-ecd-snapshots
+  392  aws s3 cp s3://gobp-ecd-snapshots/files-2021-12-21.zip ./web/sites/default
+  393  aws s3 ls
+  394  aws ls s3://gobp-ecd-snapshots/*
+  395  aws s3 ls s3://gobp-ecd-snapshots/*
+  396  aws s3 ls s3://gobp-ecd-snapshots
+  397  aws s3 ls ~/./web/sites/default
+  398  aws s3 ls ./web/sites/default
+  399  aws s3 ls ~/./web/sites/default
+  400  aws s3 ls ~/ ./web/sites/default
+  401  aws s3 cp s3://gobp-ecd-snapshots/gdecms-2021-12-21.sql.gz ./mariadb-init
+  402  cd ./mariadb-init
+  403  gunzip gdecms-2021-12-21.sql.gz
+  404  rm drupal.sql 
+  405  cd ./web/sites/default
+  406  cd ..
+  407  cd ./web/sites/default
+  408  unzip files-2021-12-21.zip
+  409  docker-compose up -d
+  410  http://drupal.docker.localhost:7005/update.php
+  411  docker exec -it my_drupal9_project_php ./bin/set-root-perms.sh
+  412  winpty docker exec -it my_drupal9_project_php ./bin/set-root-perms.sh
+  413  aws --version
+  414  docker:compose logs
+  415  cd ../../../../
+  416  cd ../../
+  417  cd ~/Desktop/debugacademy/
+  418  ls -l
+  419  cd ../
+  420  ls -l
+  421  cd drupal9
+  422  ddev start
+  423  ddev launch
+  424  winpty ddev ssh
+  425  cd ../
+  426  cd drupal8
+  427  ddev start
+  428  ddev launch
+  429  winpty ddev ssh
+  430  cd ../../
+  431  cd c:
+  432  cd GOP
+  433  cd cms-prod-test
+  434  history > file3.txt
+  435  cd ~/Desktop/debugacademy/drupal/
+  436  winpty ddev ssh
+  437  composer require 'drupal/transliterate_filenames:^2.0'
+  438  winpty ddev ssh
+  439  ddev launch
+  440  eval $(ssh-agent)
+  441  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  442  ssh-add -l
+  443  ssh-add
+  444  ssh-add -l
+  445  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  446  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  447  cd ~/Desktop/debugacademy/drupal/
+  448  ddev start
+  449  ddev launch
+  450  docker-compose up -d
+  451  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  452  ssh -A ec2-user@ec2-44-234-1-86.us-east-1.compute.amazonaws.com
+  453  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  454  cd ~/Desktop/debugacademy/drupal/
+  455  ddev start
+  456  ddev launch
+  457  cd ../../../
+  458  cd web/modules/custom
+  459  ddev start
+  460  ddev launch
+  461  php composer.phar install kktsvetkov/krumo
+  462  winpty ddev ssh
+  463  ddev launch
+  464  ddev launch
+  465  ddev launch
+  466  ddev launch
+  467  ddev launch
+  468  ddev launch
+  469  docker-compose up -d
+  470  ssh -A Bastion
+  471  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  472  ssh -A Bastion
+  473  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  474   eval "$(ssh-agent -s)"
+  475  ssh-add ~/.ssh/id_ed25519
+  476  clip < ~/.ssh/id_ed25519.pub
+  477  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  478  ls ~./ssh
+  479  cd ..
+  480  pwd
+  481  cd ..
+  482  cd ..
+  483  ls ~./ssh
+  484  cd c:/
+  485  cd users
+  486  cd mnksh
+  487  ls ~./ssh
+  488  ls 
+  489  ls ~./ssh
+  490  ls ~/.ssh
+  491  ssh-add -k ~/.ssh
+  492  ssh-add -k ~/.ssh/id_rsa
+  493  ssh-add -l
+  494  cd ../,,
+  495  cd ..
+  496  cd ..
+  497  cd gop
+  498  cd cms-prod-test
+  499  ssh -A ec2-user@ec2-44-234-1-86.us-west-2.compute.amazonaws.com
+  500  history > file5.txt
+  501  ddev start
+  502  ddev launch
+  503  ddev launch
+  504  composer require 'drupal/rest_api_authentication:^1.11'
+  505  winpty ddev ssh
+  506  ddev logs
+  507  winpty ddev ssh
+  508  ddev launch
+  509  git branch | clip
+  510  git branch > branch.txt
+  511  ls
+  512  vi branch.txt
+  513  nano branch.txt
+  514  nano branch.txt
+  515  ddev launch
+  516  cd ../../
+  517  cd drupal9
+  518  ddev start
+  519  ddev launch
+  520  winpty ddev ssh
+  521  drupal --version
+  522  winpty ddev ssh
+  523  ddev -v
+  524  drush status
+  525  winpty ddev ssh
+  526  ddev launch
+  527  cd ../
+  528  mkdir my-drupal
+  529  cd my-drupal
+  530  ddev config --project-type=drupal9--docroot=web --create-docroot
+  531  ddev config --project-type=drupal8 --docroot=web --create-docroot
+  532  ddev start
+  533  ddev composer create "drupal/recommended-project:^9"
+  534  ddev launch
+  535  ddev stop
+  536  ddev config --mutagen-enabled
+  537  ddev start
+  538  winpty ddev ssh
+  539  cd web/sites/default
+  540  chmod +w ./
+  541  cd default.services.yml services.yml
+  542  cp default.services.yml services.yml
+  543  cd ../../../
+  544  winpty ddev ssh
+  545  history > file3.txt
