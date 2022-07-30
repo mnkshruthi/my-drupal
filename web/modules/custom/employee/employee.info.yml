@@ -1,0 +1,4 @@
+name: Employee
+type: module
+description: 'This is an example module to create a form'
+core_version_requirement: ^9 || ^10

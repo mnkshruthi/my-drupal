@@ -1,7 +1,7 @@
 employee.createEmployee:
-  path: '/create-Employees'
+  path: '/create-employee'
   defaults:
     _form: '\Drupal\employee\Form\EmployeeForm'
-    _title: 'Create Employee second'
+    _title: 'Create Employee'
   requirements:
     _permission: 'access content'
