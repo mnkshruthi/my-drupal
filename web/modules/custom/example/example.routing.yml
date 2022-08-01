@@ -1,0 +1,7 @@
+example.createexampleemployee:
+  path: '/create-exampleemployee'
+  defaults:
+    _form: '\Drupal\example\Form\ExampleForm'
+    _title: 'Create another employee'
+  requirements:
+    _permission: 'access content'
