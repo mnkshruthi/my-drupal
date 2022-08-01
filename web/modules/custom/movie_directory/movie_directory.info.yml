@@ -2,4 +2,4 @@ name: Movie Directory
 description: Allow users to search info on movies
 package: Custom
 type: module
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
